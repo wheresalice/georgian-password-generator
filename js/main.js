@@ -22,7 +22,7 @@ $.getJSON("/wordlist.json", function(wordlist) {
   let password = [];
   for (var i = 0; i < 3; i++) {
     let word = wordlist['words'][Math.floor(Math.random() * wordlist['words'].length)];
-    password.push(word.charAt(0).toUpperCase() + word.slice(1));
+    password.push(word);
     maybePush(password);
   }
   $('#password').html(password.join(''))
